@@ -25,90 +25,85 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="muted">Spentra · Effective 6 May 2026 · Last updated 6 May 2026</p>
+<p class="muted">Spentra for iPhone and Android · Effective 9 November 2026 · Last updated 9 November 2026</p>
 
 <p>
-Spentra is a local-first expense tracker. We are designed so that the developer never sees your financial data.
-This policy explains exactly what stays on your device, what (very little) leaves it, and the permissions Spentra
-asks for and why.
+Spentra is a local-first expense tracker. It is designed so that the developer never sees your financial data.
+This policy explains what stays on your device, what little leaves it, and the permissions Spentra asks for and why.
 </p>
 
 <h2>1. The short version</h2>
 <ul>
-  <li>Every transaction, category, budget, and receipt image you create is stored only on your device.</li>
-  <li>We do not run servers that hold your data. We do not have user accounts.</li>
-  <li>We do not collect analytics, advertising IDs, or tracking data.</li>
-  <li>The only network calls Spentra makes are: (a) public exchange-rate lookups, (b) Apple's in-app purchase validation, and (c) RevenueCat's purchase-status check (no personal data sent).</li>
+  <li>Your transactions, categories, budgets and receipt images are stored on your device. We do not run servers that hold them, and there are no user accounts.</li>
+  <li>We do not use advertising, advertising IDs or cross-app tracking.</li>
+  <li>Spentra connects to outside services only for exchange rates, purchases and subscription status, and the receipt-scanning component's technical diagnostics. Each is described in section 4.</li>
 </ul>
 
-<h2>2. Data we store on your device</h2>
-<p>The following are saved in app storage on your iPhone:</p>
+<h2>2. Data stored on your device</h2>
 <ul>
-  <li>Transactions you log: amount, currency, category, date, optional note, optional merchant, optional contact name for splits.</li>
-  <li>Receipt images you scan, compressed and saved as JPEG files in Spentra's app folder.</li>
-  <li>Budgets and category structures you create.</li>
-  <li>App preferences: language, default currency, dashboard view (month/year).</li>
-  <li>Cached exchange rates (so the app works offline).</li>
+  <li>Transactions you log: amount, currency, category, date, and optional note, merchant and contact name for splits.</li>
+  <li>Receipt images, compressed and saved in Spentra's app folder.</li>
+  <li>Budgets and categories you create.</li>
+  <li>App preferences such as language, default currency and dashboard view.</li>
+  <li>Cached exchange rates, so the app works offline.</li>
+  <li>Your free-trial status, kept in your device's secure storage.</li>
 </ul>
 <p>
-This data never leaves your device unless you explicitly export or back it up using the app's Backup or Export features,
-in which case the destination (Files, iCloud Drive, email, AirDrop, etc.) is chosen by you.
+This data stays on your device unless you export or back it up. If you use Spentra's Backup or Export features, you choose
+the destination, such as Files, iCloud Drive, Google Drive or email.
+</p>
+<p>
+<strong>Device backups.</strong> If automatic backup is turned on for your device (iCloud Backup on iPhone, or Android's Google
+backup), your operating system may include Spentra's app data in that backup. Those backups are controlled by your Apple or Google
+account settings, and we cannot access them.
 </p>
 
 <h2>3. Permissions Spentra requests</h2>
 <ul>
-  <li><strong>Camera</strong> — only when you tap the scan icon to capture a receipt. Images are saved locally and processed on-device. No image is uploaded.</li>
-  <li><strong>Contacts</strong> — only when you tap the contact icon while adding a split, to attach a name to a split. Spentra reads only the contact you select.</li>
-  <li><strong>Photo Library</strong> — used only if you choose to attach a saved receipt image instead of scanning a new one.</li>
+  <li><strong>Camera</strong>: only when you scan a receipt. Images are saved and processed on your device.</li>
+  <li><strong>Contacts</strong>: only when you tap the contact icon on a split, to attach a name. Spentra saves only the name of the contact you select, and does not change your contacts.</li>
+  <li><strong>Photos</strong>: to attach a saved receipt image. On Android you choose the image in the system photo picker, and Spentra receives only that image.</li>
 </ul>
-<p>You can decline or revoke any of these in iOS Settings; the app remains functional with manual entry.</p>
+<p>You can decline or revoke these in your device settings. Spentra still works with manual entry.</p>
 
-<h2>4. What we send over the network</h2>
+<h2>4. What is sent over the network</h2>
 <ul>
-  <li><strong>Exchange rates.</strong> When you record a transaction in a non-base currency, Spentra fetches the latest published rate from <code>open.er-api.com</code>. We send only the currency code (e.g. <code>USD</code>); we do not send the amount, your identity, or any transaction detail.</li>
-  <li><strong>In-app purchase.</strong> If you buy the Lifetime Unlock, the purchase is processed by Apple. Apple's privacy practices apply to that transaction and are documented at <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>. Spentra does not see your Apple ID or payment details.</li>
-  <li><strong>RevenueCat.</strong> Spentra uses <a href="https://www.revenuecat.com/privacy">RevenueCat</a> to verify whether your Apple ID has the Lifetime Unlock entitlement. RevenueCat receives an anonymous app-installation ID and the receipt issued by Apple. No transactions, names, or financial data are sent.</li>
+  <li><strong>Exchange rates.</strong> Spentra fetches published rates from <code>open.er-api.com</code>. The request names a currency code (for example <code>USD</code>). It does not include amounts or transaction details. Like any internet request, it reveals your IP address to that service.</li>
+  <li><strong>Purchases.</strong> Subscriptions and one-time purchases are processed by Apple on iPhone and Google Play on Android, under their privacy policies: <a href="https://www.apple.com/legal/privacy/">Apple</a> and <a href="https://policies.google.com/privacy">Google</a>. Spentra does not see your payment details.</li>
+  <li><strong>RevenueCat.</strong> Spentra uses <a href="https://www.revenuecat.com/privacy">RevenueCat</a> to confirm whether you have an active purchase. RevenueCat receives an anonymous app user ID, your purchase history and receipts, and basic technical information about your device and app. Your transactions, receipts and names are not sent.</li>
+  <li><strong>Google ML Kit.</strong> Receipt scanning uses Google's ML Kit (see section 5). ML Kit may send Google technical data such as device model, operating system version, app information and performance and usage diagnostics. Google describes this for Android in its <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>.</li>
 </ul>
-<p>That is the complete list. Spentra makes no other network calls.</p>
 
-<h2>5. On-device receipt scanning (OCR)</h2>
+<h2>5. On-device receipt scanning</h2>
 <p>
-Receipt scanning uses Apple's on-device text-recognition APIs. The image and the recognised text remain on your phone.
-No part of a scanned receipt is uploaded to us, to Apple, or to anyone else.
+Receipt text is recognised on your device using Google ML Kit. The receipt image and the recognised text are processed on your
+device and are not uploaded by Spentra.
 </p>
 
 <h2>6. Children's privacy</h2>
-<p>
-Spentra is not directed at children under 13 (or under 16 in the UK / EU). We do not knowingly collect data from children
-because we do not knowingly collect data from anyone.
-</p>
+<p>Spentra is not directed at children under 13 (or under 16 in the UK and EU), and we do not knowingly collect their data.</p>
 
-<h2>7. International users (UAE, UK, EU, India)</h2>
+<h2>7. Your choices and international users</h2>
 <p>
-Because your data is stored only on your device, no cross-border transfer of your personal data occurs.
-You are the controller of your own data. If you wish to delete it, uninstall Spentra; this removes the local database and
-all receipt images. Backups you have exported to your own cloud storage are managed by you.
+Your expense data is on your device and under your control. To delete it, uninstall Spentra, which removes the local database and
+receipt images. Backups you have exported or that your device has made are managed by you. RevenueCat, Apple and Google handle
+purchase records under their own policies. To ask about purchase data linked to your install, contact us using the address below.
 </p>
 
 <h2>8. Security</h2>
 <p>
-Spentra relies on iOS sandboxing and full-device encryption (enabled on every modern iPhone) to protect your data at rest.
-Backup zip files you create are not encrypted by Spentra; protect them as you would any other personal file.
+Spentra relies on your device's app sandboxing and encryption to protect your data at rest. Connections to the services above use
+HTTPS. Backup zip files you create are not encrypted by Spentra, so protect them as you would any personal file.
 </p>
 
 <h2>9. Changes to this policy</h2>
-<p>
-If we materially change this policy, we will update the date at the top and, where required, prompt you in the app.
-Continued use after a change means you accept the new policy.
-</p>
+<p>If we materially change this policy, we will update the date at the top and, where required, tell you in the app.</p>
 
 <h2>10. Contact</h2>
-<p>
-Questions: <a href="mailto:kprpillai007@gmail.com">kprpillai007@gmail.com</a>.
-</p>
+<p>Questions: <a href="mailto:kprpillai007@gmail.com">kprpillai007@gmail.com</a>.</p>
 
 <hr/>
-<p class="muted">Spentra is operated by Rajesh KP (<a href="https://kprajesh.com">kprajesh.com</a>).</p>
+<p class="muted">Spentra is operated by Rajesh K Pillai.</p>
 
 </body>
 </html>
